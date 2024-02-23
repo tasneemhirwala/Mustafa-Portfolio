@@ -11,41 +11,24 @@
       href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap"
       rel="stylesheet"
     />
-    <link href="
-    https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css
-    " rel="stylesheet">
-    
   </head>
   <body>
-    <section id="nav">
-      <nav class="nav-bar">
-
-        <div class="logo-img">
-          <img src="./Images/Port-folio.png" alt="" />
-        </div>
-        <div class="open-menu" onclick="toggleMenu()">
-          <i class="fa fa-bars"></i>
-        <ul class="unordered-bar">
-          <li class="details-bar"><a href="#">About</a></li>
-          <li class="details-bar"><a href="#">Project</a></li>
-          <li class="details-bar"><a href="#">Experince</a></li>
-          <li class="details-bar"><a href="#">Profiency</a></li>
-          <li class="details-bar"><a href="#">Academic</a></li>
-        </ul>
-      </nav>
-      <div id="mobile-menu" class="unordered-bar">
-        <li class="details-bar"><a href="#">About</a></li>
-        <li class="details-bar"><a href="#">Project</a></li>
-        <li class="details-bar"><a href="#">Experience</a></li>
-        <li class="details-bar"><a href="#">Proficiency</a></li>
-        <li class="details-bar"><a href="#">Academic</a></li>
+    <nav>
+      <input type="checkbox" id="sidebar-active">
+      <label for="sidebar-active" class="open-sidebar-active">
+        <img src="./SVGS/menu_FILL0_wght400_GRAD0_opsz24.svg" height="32" width="32" alt="">
+      </label>
+      <label id="overlay" for="sidebar-active"></label>
+      <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-active">
+          <img src="./SVGS/close_FILL0_wght400_GRAD0_opsz24.svg" height="32" width="32" alt="">
+        </label>
+        <a href="#" class="home-link">Experience</a>
+        <a href="#">Project</a>
+        <a href="#">About</a>
+        <a href="#">Education</a>
+        <a href="#"> Profiency</a>
       </div>
-    </section>
-    <script>
-      function toggleMenu() {
-        var mobileMenu = document.getElementById("mobile-menu");
-        mobileMenu.style.display = (mobileMenu.style.display === "flex") ? "none" : "flex";
-      }
-    </script>
+    </nav>
   </body>
 </html>
