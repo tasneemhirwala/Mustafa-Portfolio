@@ -71,7 +71,7 @@ nav img{
     right: 0;
   }
   #sidebar-active:checked ~ #overlay{
-    background-color: red;
+    background: red;
     height: 100%;
     width: 100%;
     position: fixed;
