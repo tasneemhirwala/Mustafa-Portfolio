@@ -70,7 +70,7 @@ body {
 #mobile-menu {
   overflow: hidden;
   display: none;
-  flex-direction: row-reverse;
+  flex-direction: column;
   background: #f5eec8;
   position: absolute;
   top: 70px;
