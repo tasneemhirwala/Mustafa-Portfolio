@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+}
+#nav {
+  overflow-x: hidden;
+}
+.nav-bar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5eec8;
+  padding: 10px;
+}
+.logo-img {
+  width: 9%;
+}
+.logo-img img {
+  max-width: 150px; /* Adjust the max-width as needed */
+}
+
+.unordered-bar {
+  list-style: none;
+  display: flex;
+}
+
+.details-bar {
+    margin-right: 20px;
+  }
+  
+  .details-bar a {
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+    font-family: "Ysabeau Infant", sans-serif;
+    font-size: 17px;
+    color: black;
+    transition: color 0.3s ease-in;
+  }
+  
+  .unordered-bar li a::before {
+    content: "";
+    height: 2px;
+    width: 0;
+    background: hsl(204, 76%, 82%);
+    display: block;
+    position: absolute;
+    bottom: -2px; 
+    transition: width 0.3s ease-in,bottom 0.3s ease-in;;
+  }
+  
+  .unordered-bar li a:hover::before {
+    width: 100%;
+    bottom: -10px;
+  }
+  
+  .unordered-bar li a:hover {
+    color: #a5cae4;
+  }
+  /* Existing styles remain unchanged */
+
+/* New styles for mobile menu */
+#mobile-menu {
+  overflow: hidden;
+  display: none;
+  flex-direction: row-reverse;
+  background: #f5eec8;
+  position: absolute;
+  top: 70px;
+  left: 160px;
+  width: 20%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+#mobile-menu .details-bar {
+  margin-left: 6px;
+  margin-bottom: 10px;
+  padding: 10px; /* Add padding to the items for better spacing */
+  /* Center the text */
+  /* border-bottom: 1px solid #ccc; Add a border between items */
+}
+.details-bar a{
+  text-align: left;
+}
+#mobile-menu .details-bar:last-child {
+  margin-bottom: 0; /* Remove margin from the last item */
+  border-bottom: none; /* Remove border from the last item */
+}
+
+@media only screen and (max-width: 768px) {
+  .unordered-bar {
+    display: none;
+  }
+
+  .open-menu {
+    display: block;
+  }
+
+  #mobile-menu {
+    display: flex;
+  }
+}
