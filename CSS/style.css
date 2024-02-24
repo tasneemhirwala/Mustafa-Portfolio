@@ -74,7 +74,7 @@ nav img{
   #sidebar-active:checked ~ #overlay{
     background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
     height: 100%;
-    width: 70.8%;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 228px;
