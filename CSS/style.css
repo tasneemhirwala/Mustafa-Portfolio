@@ -42,16 +42,17 @@ nav img{
 .open-sidebar-active , .close-sidebar-active{
   padding: 0 20px;
   display: none;
+  cursor: pointer;
 }
-@media(max-width: 450px){
+@media(max-width: 768px){
   .links-container{
     flex-direction: column;
     align-items: flex-start;
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -50%;
     z-index: 10;
-    width: 300px;
+    width: 200px;
     background-color: var(--color-1);
     box-shadow: -5px 0 5px 0 0 0 0.25;
     transition: 0.75s ease-out;
@@ -71,12 +72,13 @@ nav img{
     right: 0;
   }
   #sidebar-active:checked ~ #overlay{
-    background: red;
+    background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
     height: 100%;
-    width: 100%;
+    width: 70%;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 228px;
     z-index: 9;
   }
+  
 }
