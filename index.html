@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
   <body>
     <nav>
@@ -43,72 +48,102 @@
 
     <section id="Experience">
       <h2>Experience</h2>
-      <!-- Card 1 -->
-      <div class="cards">
-        <div class="title-name-1">
-          <h4>Client Name 1:</h4>
-          <span class="info">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-            consequatu.
-          </span>
-          <div class="btn-bar"></div>
-          <button onclick="showMore('card1')">Show More</button>
-          <div class="client-reviews" id="card1-reviews">
-            <div class="client-review">
-              <img src="path/to/client1.jpg" alt="Client 1" />
-              <p>Client 1's review goes here.</p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Card 2 -->
-        <div class="title-name-2">
-          <h4>Client Name 2:</h4>
-          <span class="info">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-            consequatu.
-          </span>
-          <button onclick="showMore('card2')">Show More</button>
-          <div class="client-reviews" id="card2-reviews">
-            <!-- Add reviews for card 2 if needed -->
-            <div class="client-reviews" id="card1-reviews">
-              <div class="client-review">
-                <img src="path/to/client1.jpg" alt="Client 2" />
-                <p>Client 2's review goes here.</p>
+      <!-- Swiper Carousel Container -->
+      <div class="swiper-container" id="experience-carousel">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="cards">
+              <div class="title-name-1">
+                <h4>Client Name 1:</h4>
+                <span class="info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                  consequatu.
+                </span>
+                <div class="btn-bar"></div>
+                <button onclick="showMore('card1')">Show More</button>
+                <div class="client-reviews" id="card1-reviews">
+                  <div class="client-review">
+                    <img src="path/to/client1.jpg" alt="Client 1" />
+                    <p>Client 1's review goes here.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Card 3 -->
-        <div class="title-name-3">
-          <h4>Client Name 3:</h4>
-          <span class="info">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-            consequatu.
-          </span>
-          <button onclick="showMore('card3')">Show More</button>
-          <div class="client-reviews" id="card3-reviews">
-            <!-- Add reviews for card 3 if needed -->
-            <div class="client-reviews" id="card1-reviews">
-              <div class="client-review">
-                <img src="path/to/client1.jpg" alt="Client 3" />
-                <p>Client 3's review goes here.</p>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="cards">
+              <div class="title-name-2">
+                <h4>Client Name 2:</h4>
+                <span class="info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                  consequatu.
+                </span>
+                <button onclick="showMore('card2')">Show More</button>
+                <div class="client-reviews" id="card2-reviews">
+                  <div class="client-review">
+                    <img src="path/to/client2.jpg" alt="Client 2" />
+                    <p>Client 2's review goes here.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="cards">
+              <div class="title-name-3">
+                <h4>Client Name 3:</h4>
+                <span class="info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                  consequatu.
+                </span>
+                <button onclick="showMore('card3')">Show More</button>
+                <div class="client-reviews" id="card3-reviews">
+                  <div class="client-review">
+                    <img src="path/to/client3.jpg" alt="Client 3" />
+                    <p>Client 3's review goes here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more slides as needed -->
         </div>
+
+        <!-- Add navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
-    </section>
 
-    <script>
-      function showMore(cardId) {
-        // Get the reviews container for the specific card
-        var reviewsContainer = document.getElementById(cardId + "-reviews");
-        // Toggle the display property to show or hide the reviews
-        reviewsContainer.style.display =
-          reviewsContainer.style.display === "none" ? "block" : "none";
-      }
-    </script>
+      <script>
+        var swiper = new Swiper("#experience-carousel", {
+          slidesPerView: 2,
+          spaceBetween: 30,
+          slidesOffsetBefore: -20, // Adjust this value
+          slidesOffsetAfter: -150,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          observer: true,
+          observeParents: true,
+          observeSlideChildren: true,
+          grabCursor: true, // Enable grabbing cursor
+          draggable: true,
+        });
+
+        function showMore(cardId) {
+          var reviewsContainer = document.getElementById(cardId + "-reviews");
+          reviewsContainer.style.display =
+            reviewsContainer.style.display === "none" ? "block" : "none";
+        }
+      </script>
+    </section>
   </body>
 </html>

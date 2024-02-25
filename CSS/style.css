@@ -57,6 +57,12 @@ nav img {
   display: flex;
   flex-direction: column;
 }
+#experience-carousel {
+  overflow: hidden;
+  position: relative;
+  height: 50vh; /* Set the initial visible height as needed */
+  transition: height 2s ease-in-out;
+}
 @media (max-width: 768px) {
   .links-container {
     flex-direction: column;
