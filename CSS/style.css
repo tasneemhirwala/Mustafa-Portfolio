@@ -96,7 +96,7 @@ nav img {
   }
 
 }
-@media (max-width: 368px){
+@media (max-width: 480px){
   #sidebar-active:checked ~ #overlay {
     background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
     height: 100%;
