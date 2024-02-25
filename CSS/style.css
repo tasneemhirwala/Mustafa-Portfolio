@@ -45,6 +45,18 @@ nav img {
   display: none;
   cursor: pointer;
 }
+#Experience{
+  margin-top: 70px;
+}
+.cards{
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+}
+.cards button{
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 768px) {
   .links-container {
     flex-direction: column;
@@ -82,4 +94,5 @@ nav img {
     left: 228px;
     z-index: 9;
   }
+
 }
