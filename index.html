@@ -62,7 +62,10 @@
                   consequatu.
                 </span>
                 <div class="btn-bar"></div>
-                <button onclick="showMore('card1')">Show More</button>
+                <button class="show-more-button" data-card-id="card1">
+                  Show More
+                </button>
+
                 <div class="client-reviews" id="card1-reviews">
                   <div class="client-review">
                     <img src="path/to/client1.jpg" alt="Client 1" />
@@ -112,7 +115,24 @@
               </div>
             </div>
           </div>
-
+          <div class="swiper-slide">
+            <div class="cards">
+              <div class="title-name-3">
+                <h4>Client Name 3:</h4>
+                <span class="info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                  consequatu.
+                </span>
+                <button onclick="showMore('card3')">Show More</button>
+                <div class="client-reviews" id="card3-reviews">
+                  <div class="client-review">
+                    <img src="path/to/client3.jpg" alt="Client 3" />
+                    <p>Client 3's review goes here.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- Add more slides as needed -->
         </div>
 
@@ -122,27 +142,46 @@
       </div>
 
       <script>
-        var swiper = new Swiper("#experience-carousel", {
-          slidesPerView: 2,
-          spaceBetween: 30,
-          slidesOffsetBefore: -20, // Adjust this value
-          slidesOffsetAfter: -150,
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          observer: true,
-          observeParents: true,
-          observeSlideChildren: true,
-          grabCursor: true, // Enable grabbing cursor
-          draggable: true,
-        });
+        document.addEventListener("DOMContentLoaded", function () {
+          var swiper = new Swiper("#experience-carousel", {
+            slidesPerView: 2,
+            spaceBetween: -150,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            on: {
+              slideChange: function () {
+                var activeIndex = this.activeIndex;
+                var translateValue = -activeIndex * 50 + "%";
 
-        function showMore(cardId) {
-          var reviewsContainer = document.getElementById(cardId + "-reviews");
-          reviewsContainer.style.display =
-            reviewsContainer.style.display === "none" ? "block" : "none";
-        }
+                this.slides
+                  .transition(300)
+                  .transform("translateX(" + translateValue + ")");
+              },
+            },
+          });
+
+          function showMore(cardId) {
+            var reviewsContainer = document.getElementById(cardId + "-reviews");
+            var displayStyle =
+              window.getComputedStyle(reviewsContainer).display || "none";
+
+            reviewsContainer.style.display =
+              displayStyle === "none" ? "block" : "none";
+          }
+
+          // Delegating click event for 'Show More' buttons
+          document.addEventListener("click", function (event) {
+            if (
+              event.target.tagName === "BUTTON" &&
+              event.target.classList.contains("show-more-button")
+            ) {
+              var cardId = event.target.getAttribute("data-card-id");
+              showMore(cardId);
+            }
+          });
+        });
       </script>
     </section>
   </body>
