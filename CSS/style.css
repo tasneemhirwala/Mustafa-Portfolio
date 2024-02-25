@@ -96,3 +96,14 @@ nav img {
   }
 
 }
+@media (max-width: 368px){
+  #sidebar-active:checked ~ #overlay {
+    background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 177px;
+    z-index: 9;
+  }
+}
