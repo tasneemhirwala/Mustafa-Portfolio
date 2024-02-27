@@ -13,9 +13,12 @@
     />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
   </head>
   <body>
     <nav>
@@ -45,144 +48,110 @@
         <a href="#"> Profiency</a>
       </div>
     </nav>
-
-    <section id="Experience">
-      <h2>Experience</h2>
-
-      <!-- Swiper Carousel Container -->
-      <div class="swiper-container" id="experience-carousel">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide">
-            <div class="cards">
-              <div class="title-name-1">
-                <h4>Client Name 1:</h4>
-                <span class="info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                  consequatu.
-                </span>
-                <div class="btn-bar"></div>
-                <button class="show-more-button" data-card-id="card1">
-                  Show More
-                </button>
-
-                <div class="client-reviews" id="card1-reviews">
-                  <div class="client-review">
-                    <img src="path/to/client1.jpg" alt="Client 1" />
-                    <p>Client 1's review goes here.</p>
-                  </div>
-                </div>
-              </div>
+    <div class="container">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="card">
+            <img src="./Images/client-1.jpg" alt="" />
+            <h2>24Bit Company</h2>
+            <p>As a Flutter developer on a social media app.</p>
+            <div class="card-content">
+              <span
+                >I implemented some features like user profile page, other user
+                profile pages, view story page, view post page, post uploading
+                page, chat feature, search feature, and dual camera feature with
+                using<strong>&nbsp; Get-X management</strong
+                >&nbsp;and<strong>&nbsp;Firebase</strong>&nbsp;as DataBase</span
+              >
             </div>
+            <div class="show-more" onclick="toggleContent(this)">Show More</div>
           </div>
-
-          <!-- Slide 2 -->
-          <div class="swiper-slide">
-            <div class="cards">
-              <div class="title-name-2">
-                <h4>Client Name 2:</h4>
-                <span class="info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                  consequatu.
-                </span>
-                <button onclick="showMore('card2')">Show More</button>
-                <div class="client-reviews" id="card2-reviews">
-                  <div class="client-review">
-                    <img src="path/to/client2.jpg" alt="Client 2" />
-                    <p>Client 2's review goes here.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="swiper-slide">
-            <div class="cards">
-              <div class="title-name-3">
-                <h4>Client Name 3:</h4>
-                <span class="info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                  consequatu.
-                </span>
-                <button onclick="showMore('card3')">Show More</button>
-                <div class="client-reviews" id="card3-reviews">
-                  <div class="client-review">
-                    <img src="path/to/client3.jpg" alt="Client 3" />
-                    <p>Client 3's review goes here.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="cards">
-              <div class="title-name-3">
-                <h4>Client Name 3:</h4>
-                <span class="info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                  consequatu.
-                </span>
-                <button onclick="showMore('card3')">Show More</button>
-                <div class="client-reviews" id="card3-reviews">
-                  <div class="client-review">
-                    <img src="path/to/client3.jpg" alt="Client 3" />
-                    <p>Client 3's review goes here.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Add more slides as needed -->
         </div>
-
-        <!-- Add navigation buttons -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="item">
+          <div class="card">
+            <img src="./Images/client-1.jpg" alt="" />
+            <h2>24Bit Company</h2>
+            <p>As a Flutter developer on a social media app.</p>
+            <div class="card-content">
+              <span
+                >I implemented some features like user profile page, other user
+                profile pages, view story page, view post page, post uploading
+                page, chat feature, search feature, and dual camera feature with
+                using<strong>&nbsp; Get-X management</strong
+                >&nbsp;and<strong>&nbsp;Firebase</strong>&nbsp;as DataBase</span
+              >
+            </div>
+            <div class="show-more" onclick="toggleContent(this)">Show More</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card">
+            <img src="./Images/client-1.jpg" alt="" />
+            <h2>24Bit Company</h2>
+            <p>As a Flutter developer on a social media app.</p>
+            <div class="card-content">
+              <span
+                >I implemented some features like user profile page, other user
+                profile pages, view story page, view post page, post uploading
+                page, chat feature, search feature, and dual camera feature with
+                using<strong>&nbsp; Get-X management</strong
+                >&nbsp;and<strong>&nbsp;Firebase</strong>&nbsp;as DataBase</span
+              >
+            </div>
+            <div class="show-more" onclick="toggleContent(this)">Show More</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card">
+            <img src="./Images/client-1.jpg" alt="" />
+            <h2>24Bit Company</h2>
+            <p>As a Flutter developer on a social media app.</p>
+            <div class="card-content">
+              <span
+                >I implemented some features like user profile page, other user
+                profile pages, view story page, view post page, post uploading
+                page, chat feature, search feature, and dual camera feature with
+                using<strong>&nbsp; Get-X management</strong
+                >&nbsp;and<strong>&nbsp;Firebase</strong>&nbsp;as DataBase</span
+              >
+            </div>
+            <div class="show-more" onclick="toggleContent(this)">Show More</div>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var swiper = new Swiper("#experience-carousel", {
-            slidesPerView: 2,
-            spaceBetween: -150,
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1.5,
+              nav: true,
+              margin: 5,
             },
-            on: {
-              slideChange: function () {
-                var activeIndex = this.activeIndex;
-                var translateValue = -activeIndex * 50 + "%";
-
-                this.slides
-                  .transition(300)
-                  .transform("translateX(" + translateValue + ")");
-              },
+            600: {
+              items: 2.5,
+              nav: true,
             },
-          });
-
-          function showMore(cardId) {
-            var reviewsContainer = document.getElementById(cardId + "-reviews");
-            var displayStyle =
-              window.getComputedStyle(reviewsContainer).display || "none";
-
-            reviewsContainer.style.display =
-              displayStyle === "none" ? "block" : "none";
-          }
-
-          // Delegating click event for 'Show More' buttons
-          document.addEventListener("click", function (event) {
-            if (
-              event.target.tagName === "BUTTON" &&
-              event.target.classList.contains("show-more-button")
-            ) {
-              var cardId = event.target.getAttribute("data-card-id");
-              showMore(cardId);
-            }
-          });
+            1000: {
+              items: 3,
+              nav: true,
+              loop: false,
+            },
+          },
         });
-      </script>
-    </section>
+      });
+
+      function toggleContent(element) {
+        var cardContent = $(element).siblings(".card-content");
+        cardContent.slideToggle();
+      }
+    </script>
   </body>
 </html>
