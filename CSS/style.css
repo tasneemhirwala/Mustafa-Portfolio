@@ -106,4 +106,33 @@ html {
   margin: 26px 0px 0px 0px;
 }
 @media (max-width: 768px) {
+  #nav-bar .navbar-nav {
+    padding-left: 300px;
+    animation: slideFromRight 1s ease-out;
+  }
+  @keyframes slideFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .navbar-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+  .navbar-collapse.show {
+     max-height: 500px;
+  }
 }
+@media(max-width:480px){
+  #nav-bar .navbar-nav {
+    padding-left: 200px;
+    animation: slideFromRight 1s ease-out;
+  }
+}
+
