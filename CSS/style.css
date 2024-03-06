@@ -5,33 +5,33 @@
 html {
   font-size: 12pt;
 }
- #nav-bar .navbar-brand{
-  font-family:  "Cedarville Cursive", cursive;
+#nav-bar .navbar-brand {
+  font-family: "Cedarville Cursive", cursive;
   font-size: 35px;
   margin-left: 50px;
 }
-.navbar-nav a:hover{
+.navbar-nav a:hover {
   border-bottom: 2px solid;
   background-color: blanchedalmond;
   transition: all 3s ease;
 }
-#introduction{
+#introduction {
   overflow-x: hidden;
   margin-top: 60px;
 }
-#introduction .col-lg-6{
+#introduction .col-lg-6 {
   margin: 0px 0px 0px 0px;
 }
-.col-10 img{
+.col-10 img {
   margin-left: 40px;
   border-radius: 194px;
 }
- #introduction .lead{
+#introduction .lead {
   font-weight: 300;
   font-size: 20px;
-  font-family: "Open Sans" , sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
-#introduction .mb-3 img{
+#introduction .mb-3 img {
   padding: 10px;
 }
 #Experience {
@@ -59,7 +59,7 @@ html {
 }
 
 #Experience .show-more {
-  cursor: pointer;;
+  cursor: pointer;
   text-decoration: underline;
   display: block;
   margin-top: 10px;
@@ -108,10 +108,15 @@ html {
     transition: max-height 2s ease-out;
   }
   .navbar-collapse.show {
-     max-height: 500px;
+    max-height: 500px;
   }
 }
-@media(max-width:480px){
+@media (max-width: 480px) {
+  #nav-bar .navbar-brand {
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 35px;
+    margin-left: 7px;
+  }
   .navbar-collapse {
     max-height: 0;
     overflow: hidden;
@@ -119,6 +124,5 @@ html {
   }
   .navbar-collapse.show {
     max-height: 500px;
- }
+  }
 }
-
