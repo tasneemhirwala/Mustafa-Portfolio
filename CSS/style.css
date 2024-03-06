@@ -5,29 +5,35 @@
 html {
   font-size: 12pt;
 }
-#nav-bar .navbar-nav {
-  padding-left: 450px;
-  animation: slideFromRight 1s ease-out;
+ #nav-bar .navbar-brand{
+  font-family:  "Cedarville Cursive", cursive;
+  font-size: 35px;
+  margin-left: 50px;
 }
-@keyframes slideFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.navbar-nav a:hover{
+  border-bottom: 2px solid;
+  background-color: blanchedalmond;
+  transition: all 3s ease;
 }
-.navbar-collapse {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
+#introduction{
+  overflow-x: hidden;
+  margin-top: 60px;
 }
-.navbar-collapse.show {
-   max-height: 500px;
+#introduction .col-lg-6{
+  margin: 0px 0px 0px 0px;
 }
-
+.col-10 img{
+  margin-left: 40px;
+  border-radius: 194px;
+}
+ #introduction .lead{
+  font-weight: 300;
+  font-size: 20px;
+  font-family: "Open Sans" , sans-serif;
+}
+#introduction .mb-3 img{
+  padding: 10px;
+}
 #Experience {
   margin-top: 60px;
 }
@@ -35,104 +41,84 @@ html {
   margin-top: 20px;
 }
 
-.card {
-  background-color: #fff;
+#Experience .card {
+  background-color: lightblue;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
 }
 
-.card img {
+#Experience .card img {
   margin: 0 auto;
-  max-width: 30%;
+  max-width: 60%;
   border-radius: 8px;
 }
 
-.card-content {
+#Experience .card-content {
   display: none;
 }
 
-.show-more {
-  cursor: pointer;
-  color: #007bff;
+#Experience .show-more {
+  cursor: pointer;;
   text-decoration: underline;
   display: block;
   margin-top: 10px;
 }
-.owl-carousel .owl-item img {
-  width: 50%;
+#Experience .owl-carousel .owl-item img {
+  width: 20%;
 }
-.card p {
+#Experience .card p {
   font-size: 20px;
 }
-.owl-nav {
+#Experience .owl-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
 }
 
-.owl-prev,
-.owl-next {
+#Experience .owl-prev,
+#Experience .owl-next {
   position: absolute;
-  font-size: 10px;
-  color: #007bff;
   cursor: pointer;
-  padding: 20px;
+  padding: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px; /* Set a common font size for both icons */
 }
 
-.owl-prev {
+#Experience .owl-prev {
+  margin-top: 10px;
   left: 10px;
 }
 
-.owl-next {
+#Experience .owl-next {
+  margin-top: 10px;
   right: 10px;
 }
 
-.owl-prev:hover,
-.owl-next:hover {
+#Experience .owl-prev:hover,
+#Experience .owl-next:hover {
   color: #0056b3;
 }
-#project {
-  margin-top: 60px;
-}
-#projects {
-  margin-left: 100px;
-  display: flex;
-  gap: 10px;
-}
-#projects button {
-  width: 50%;
-  margin: 26px 0px 0px 0px;
-}
 @media (max-width: 768px) {
-  #nav-bar .navbar-nav {
-    padding-left: 300px;
-    animation: slideFromRight 1s ease-out;
-  }
-  @keyframes slideFromRight {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
   .navbar-collapse {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    transition: max-height 2s ease-out;
   }
   .navbar-collapse.show {
      max-height: 500px;
   }
 }
 @media(max-width:480px){
-  #nav-bar .navbar-nav {
-    padding-left: 200px;
-    animation: slideFromRight 1s ease-out;
+  .navbar-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s ease-out;
   }
+  .navbar-collapse.show {
+    max-height: 500px;
+ }
 }
 
