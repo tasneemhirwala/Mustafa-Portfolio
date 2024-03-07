@@ -28,45 +28,61 @@
   </head>
   <body>
     <section id="nav-bar">
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand d-lg-none" href="#">Mustafa Bharmal</a>
           <button
             class="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
-            class="collapse navbar-collapse justify-content-end pe-3"
-            id="navbarNav"
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
           >
-            <!-- Right side menu items -->
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-              </li>
-            </ul>
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#introduction">Introduction</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Experience">Experience</a>
+                </li>
+                <!-- Add more navigation items as needed -->
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
     </section>
     <!-- EndOfNavBar -->
     <!-- Start of intro -->
+    <section id="names">
+      <h4>Mustafa Bharmal</h4>
+    </section>
     <section id="introduction">
       <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row align-items-center g-5 py-5">
@@ -82,12 +98,12 @@
           </div>
           <div class="col-lg-6">
             <div class="display-5 fw-bold lh-1 mb-3">
-              <a href="#"><img src="./SVGS/github.svg" alt="" width="48" /></a>
+              <a href="#"><img src="./SVGS/github.svg" alt="" width="55" /></a>
               <a href="#"
-                ><img src="./SVGS/linkedin.svg" alt="" width="48"
+                ><img src="./SVGS/linkedin.svg" alt="" width="55"
               /></a>
               <a href="#"
-                ><img src="./SVGS/icons8-gmail (1).svg" width="48" alt=""
+                ><img src="./SVGS/icons8-gmail (1).svg" width="55" alt=""
               /></a>
             </div>
             <p class="lead">
@@ -95,6 +111,7 @@
               freelancer for the past 6 months, specializing in Flutter
               development.
               <br />
+              <br>
               With a rich background and over a year of expertise in Flutter
               development
             </p>
@@ -113,7 +130,8 @@
               <div
                 id="carouselExample1"
                 class="carousel slide"
-                data-bs-ride="carousel"
+                data-bs-ride="false"
+                data-interval="false"
               >
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -184,7 +202,8 @@
               <div
                 id="carouselExample2"
                 class="carousel slide"
-                data-bs-ride="carousel"
+                data-bs-ride="false"
+                data-interval="false"
               >
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -255,7 +274,8 @@
               <div
                 id="carouselExample3"
                 class="carousel slide"
-                data-bs-ride="carousel"
+                data-bs-ride="false"
+                data-interval="false"
               >
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -326,7 +346,8 @@
               <div
                 id="carouselExample4"
                 class="carousel slide"
-                data-bs-ride="carousel"
+                data-bs-ride="false"
+                data-interval="false"
               >
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -397,6 +418,12 @@
     </section>
     <!-- End of Experience -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -409,8 +436,9 @@
     ></script>
     <script>
       $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
-          loop: true,
+        // Initialize Owl Carousel without autoplay
+        var owl = $(".owl-carousel").owlCarousel({
+          loop: false,
           margin: 10,
           responsiveClass: true,
           responsive: {
@@ -424,18 +452,23 @@
               nav: true,
             },
             1000: {
-              items: 3,
+              items: 2.5,
               nav: true,
               loop: false,
             },
           },
+          autoplay: false,
+          autoplayTimeout: 0, // Set autoplayTimeout to 0 to ensure autoplay is disabled
         });
-      });
 
-      function toggleContent(element) {
-        var cardContent = $(element).siblings(".card-content");
-        cardContent.slideToggle();
-      }
+        // Stop autoplay forcefully
+        owl.trigger("stop.owl.autoplay");
+
+        function toggleContent(element) {
+          var cardContent = $(element).siblings(".card-content");
+          cardContent.slideToggle();
+        }
+      });
     </script>
   </body>
 </html>
